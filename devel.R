@@ -9,6 +9,8 @@ est_adm1$x <- as.integer(est_adm1$NAME_1 == "Harju")
 w <- w_dist_power(st_geometry(est_adm1), alpha = 1)
 est_adm1$slx <- w %*% est_adm1$x
 
+plot(est_adm1[, c("x", "slx")])
+
 years <- tibble(
   year = 2015:2018,
   id = 1
